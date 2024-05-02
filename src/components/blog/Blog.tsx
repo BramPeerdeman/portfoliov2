@@ -27,7 +27,7 @@ const Blog = () => {
 
         <div className="blog__card">
           <div className="blog__thumb">
-          <a href=""><span className="blog__category">Tutitorial</span></a>
+          <a href='#'><span className="blog__category">Tutitorial</span></a>
           <a href='#'><img src={Image2} alt="" className='blog__img'/></a>
           </div>
           <div className="blog__details">
@@ -42,7 +42,7 @@ const Blog = () => {
 
         <div className="blog__card">
           <div className="blog__thumb">
-          <a href=""><span className="blog__category">Business</span></a>
+          <a href='#'><span className="blog__category">Business</span></a>
           <a href='#'><img src={Image3} alt="" className='blog__img'/></a>
           </div>
           <div className="blog__details">
