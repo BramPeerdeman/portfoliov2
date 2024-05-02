@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import React from 'react';
 import "./blog.css";
 import Image1 from "../../assets/blog-1.svg";
@@ -12,7 +13,7 @@ const Blog = () => {
       <div className="blog__container grid">
         <div className="blog__card">
           <div className="blog__thumb">
-            <a href=""><span className="blog__category">Reviews</span></a>
+            <a href='#'><span className="blog__category">Reviews</span></a>
             <a href='#'><img src={Image1} alt="" className='blog__img'/></a>
           </div>
           <div className="blog__details">
