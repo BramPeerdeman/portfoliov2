@@ -5,16 +5,16 @@ const AboutBox = () => {
   return (
     <div className="about__boxes grid">
       <div className="about__box">
-        <i className="about__icon icon-cup"></i>
+        <i className="about__icon icon-layers"></i>
 
         <div>
-          <h3 className="about__title">198</h3>
+          <h3 className="about__title">19</h3>
           <span className="about__subtitle">Projects Completed</span>
         </div>
       </div>
 
       <div className="about__box">
-        <i className="about__icon icon-people"></i>
+        <i className="about__icon icon-game-controller"></i>
 
         <div>
           <h3 className="about__title">198</h3>
@@ -32,11 +32,11 @@ const AboutBox = () => {
       </div>
 
       <div className="about__box">
-        <i className="about__icon icon-cup"></i>
+        <i className="about__icon icon-star"></i>
 
         <div>
           <h3 className="about__title">3</h3>
-          <span className="about__subtitle">mlep</span>
+          <span className="about__subtitle">Years of Experience</span>
         </div>
       </div>
 
