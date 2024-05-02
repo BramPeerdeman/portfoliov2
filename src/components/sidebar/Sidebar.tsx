@@ -5,7 +5,8 @@ import Logo from "../../assets/logo.svg";
 const Sidebar = () =>
   {
     return (
-      <aside className="aside">
+      <>
+            <aside className="aside">
         <a href="#home" className="nav_logo">
           <img src={Logo} alt="" />
         </a>
@@ -35,10 +36,16 @@ const Sidebar = () =>
                 <i className="icon-graduation"></i>
                 </a>
               </li>
-
+              
               <li className="nav_item">
                 <a href="#portfolio" className="nav_link">
                 <i className="icon-layers"></i>
+                </a>
+              </li>
+
+              <li className="nav_item">
+                <a href="#testi" className="nav_link">
+                <i className="icon-trophy"></i>
                 </a>
               </li>
 
@@ -61,6 +68,11 @@ const Sidebar = () =>
           <span className="copyright">&copy; 2023 - 2024.</span>
         </div>
       </aside>
+
+      <div className="nav__toggle">
+        <i className="icon-menu"></i>
+      </div>
+      </>
     )
   }
 
