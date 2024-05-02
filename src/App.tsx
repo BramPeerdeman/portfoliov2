@@ -8,7 +8,6 @@ import Resume from './components/resume/Resume';
 import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonial';
 import Contact from './components/contact/Contact';
-import Pricing from './components/pricing/Pricing';
 import Blog from './components/blog/Blog';
 
 const App = () => 
