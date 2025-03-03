@@ -19,7 +19,7 @@ const About = () => {
               The Netherlands. I study HBO-ICT Software Engineering and have a passion
               for new technology.
             </p>
-            <a href="https://www.linkedin.com/in/bram-peerdeman-8a52a122b/" target='_blank'className="btn">
+            <a href="https://www.linkedin.com/in/bram-peerdeman-8a52a122b/" target='_blank' rel="noreferrer" className="btn">
               Linkedin
             </a>
           </div>
