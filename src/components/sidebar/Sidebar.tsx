@@ -44,17 +44,17 @@ const Sidebar = () => {
                 </a>
               </li>
 
-              <li className="nav_item">
+              {/* <li className="nav_item">
                 <a href="#testi" className="nav_link">
                   <i className="icon-trophy"></i>
                 </a>
-              </li>
+              </li> */}
 
-              <li className="nav_item">
+              {/* <li className="nav_item">
                 <a href="#blog" className="nav_link">
                   <i className="icon-note"></i>
                 </a>
-              </li>
+              </li> */}
 
               <li className="nav_item">
                 <a href="#contact" className="nav_link">

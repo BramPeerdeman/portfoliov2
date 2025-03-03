@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./about.css";
-import AboutMe from "../../assets/dancingraccoon.gif";
+import AboutMe from "../../assets/portfolio.png";
 import AboutBox from "./AboutBox";
 
 const About = () => {
@@ -15,12 +15,12 @@ const About = () => {
         <div className="about__data grid">
           <div className="about__info">
             <p className="about__description">
-              My name is Bram Peerdeman. I am 18 years old and live in Delft,
-              The Netherlands. I study software development and have a passion
+              My name is Bram Peerdeman. I am 19 years old and live in Delft,
+              The Netherlands. I study HBO-ICT Software Engineering and have a passion
               for new technology.
             </p>
-            <a href="" className="btn">
-              Download CV
+            <a href="https://www.linkedin.com/in/bram-peerdeman-8a52a122b/" target='_blank'className="btn">
+              Linkedin
             </a>
           </div>
 

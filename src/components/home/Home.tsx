@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import Me from "../../assets/dancingraccoon.gif";
+import Me from "../../assets/portfolio.png";
 import HeaderSocials from "./HeaderSocials";
 import ScrollDown from "./ScrollDown";
 import Shapes from "./Shapes";

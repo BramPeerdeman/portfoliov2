@@ -10,21 +10,21 @@ const data = [
     image: Image1,
     title: "Back-end Development",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Stack: Java. TypeScript, Node.js, PostgreSQL, Docker + more",
   },
   {
     id: 2,
     image: Image2,
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Stack: HTML, SCSS, TypeScript, React.js, Vite, Node.js + more",
   },
   {
     id: 3,
     image: Image3,
     title: "Linux",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Security(Firewall management, SSL/TLS setup) Scripting & Automation",
   },
 ];
 
