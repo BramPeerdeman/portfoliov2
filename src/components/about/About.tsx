@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./about.css";
-import AboutMe from "../../assets/portfolio.png";
+import AboutMe from "../../assets/profilepicture.png";
 import AboutBox from "./AboutBox";
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
         <div className="about__data grid">
           <div className="about__info">
             <p className="about__description">
-              My name is Bram Peerdeman. I am 19 years old and live in Delft,
+              My name is Bram Peerdeman. I am 20 years old and live in Delft,
               The Netherlands. I study HBO-ICT Software Engineering and have a passion
               for new technology.
             </p>
@@ -27,8 +27,8 @@ const About = () => {
           <div className="about__skills grid">
             <div className="skills__data">
               <div className="skills__titles">
-                <h3 className="skills__name">Typescript</h3>
-                <span className="skills__number">65%</span>
+                <h3 className="skills__name">Frontend Engineering</h3>
+                <span className="skills__number">Intermediate</span>
               </div>
 
               <div className="skills__bar">
@@ -38,8 +38,8 @@ const About = () => {
 
             <div className="skills__data">
               <div className="skills__titles">
-                <h3 className="skills__name">Node.JS</h3>
-                <span className="skills__number">70%</span>
+                <h3 className="skills__name">API & Backend Development</h3>
+                <span className="skills__number">Advanced</span>
               </div>
 
               <div className="skills__bar">
@@ -49,8 +49,8 @@ const About = () => {
 
             <div className="skills__data">
               <div className="skills__titles">
-                <h3 className="skills__name">Linux</h3>
-                <span className="skills__number">50%</span>
+                <h3 className="skills__name">DevOps & Server Management</h3>
+                <span className="skills__number">Intermediate</span>
               </div>
 
               <div className="skills__bar">
