@@ -1,92 +1,102 @@
-.resume__container {
+.resume__grid {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem;
+  gap: 3rem;
+}
+
+.resume__column-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  color: var(--accent);
+  margin-bottom: 2rem;
 }
 
 .timeline {
-  background-color: var(--container-color);
-  padding: 1.875rem;
-  border-radius: var(--border-radius);
   position: relative;
-  box-shadow: var(--shadow);
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--border-color));
 }
 
 .timeline__item {
   position: relative;
-  padding-left: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-bottom: 2.5rem;
 }
 
 .timeline__item:last-child {
   padding-bottom: 0;
 }
 
-.timeline__item::before {
-  content: '';
-  width: 1px;
-  height: 100%;
-  background-color: var(--first-color);
+.timeline__dot {
   position: absolute;
-  left: .25rem;
-  top: 0;
+  left: -2rem;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-primary);
+  transform: translateX(-5px);
 }
 
-.timeline .icon-briefcase,
-.timeline .icon-graduation {
-  position: absolute;
-  left: -0.4375rem;
-  top: 0;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  background-color: var(--container-color);
-  padding: 0.4375rem 0;
+.timeline__content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem 1.5rem;
+  transition: var(--transition);
 }
 
-.timeline__date {
-  color: #8b88b1;
-  font-size: var(--small-font-size);
+.timeline__content:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.timeline__period {
+  display: inline-block;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semibold);
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--border-radius-pill);
+  margin-bottom: 0.75rem;
 }
 
 .timeline__title {
-  font-size: var(--h3-font-size);
-  margin: 0.5rem 0;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .resume__container {
-    grid-template-columns: repeat(450px);
-    justify-content: center;
-    row-gap: 1.875rem;
-  }
-
-  .timeline__item::before {
-    left: 2px;
-  }
+.timeline__org {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 576px) {
-  .resume__container {
+.timeline__desc {
+  font-size: var(--small-font-size);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .resume__grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-}
-
-@media screen and (max-width: 350px) {
-  .timeline__item {
-    padding-left: 1.875rem;
-    padding-bottom: 1.875rem;
-  }
-
-  .timeline__item::before {
-    left: 0;
-  }
-
-  .timeline .icon-briefcase,
-  .timeline .icon-graduation {
-    left: -9px;
-  }
-
-  .timeline__text {
-    text-align: justify;
-  }
-
 }

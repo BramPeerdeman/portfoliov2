@@ -1,125 +1,94 @@
-.work__filters {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 1.875rem;
-    margin-bottom: 2.5rem;
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.work__item {
-    cursor: pointer;
-    font-weight: var(--font-bold);
+.portfolio__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
 }
 
-.work__item:hover {
-    color: var(--first-color);
+.portfolio__card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 229, 160, 0.08);
 }
 
-.work__container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.875rem;
+.portfolio__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-.work__card {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+.portfolio__folder-icon {
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
 }
 
-.work__mask {
-    background: #6c6ce5;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    transition: .3s;
-    opacity: 0;
+.portfolio__card-links {
+  display: flex;
+  gap: 0.75rem;
 }
 
-.work__card:hover .work__mask {
-    opacity: 0.9;
+.portfolio__icon-link {
+  color: var(--text-muted);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
 }
 
-.work__category {
-    color: #fff;
-    background-color: var(--first-color);
-    border-bottom-left-radius: 0.98rem;
-    border-bottom-right-radius: 0.98rem;
-    position: absolute;
-    top: 0;
-    left: 1.5rem;
-    font-size: var(--small-font-size);
-    display: inline-block;
-    padding: 0.19rem 0.625rem;
-    transform: translateY(-40px);
-    transition: .3s;
+.portfolio__icon-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
-.work__title {
-    color: #fff;
-    font-size: var(--h3-font-size);
-    margin: 0 0 0.98rem;
-    padding: 0 1.25rem;
-    position: absolute;
-    top: 3.75rem;
-    transform: translateY(30px);
-    transition: .3s;
-    opacity: 0;
+.portfolio__card-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
 }
 
-.work__button {
-    color: #fff;
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    font-size: var(--h3-font-size);
-    display: block;
-    background-color: #ffd15c;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    transition: .3s;
-    opacity: 0;
+.portfolio__card-desc {
+  color: var(--text-secondary);
+  font-size: var(--small-font-size);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
-.work__card:hover {
-    opacity: 1;
+.portfolio__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.work__card:hover .work__title,
-.work__card:hover .work__category {
-    opacity: 1;
-    transform: translateY(0);
+.portfolio__tag {
+  font-size: var(--smaller-font-size);
+  color: var(--text-muted);
+  font-weight: var(--font-medium);
 }
 
-@media screen and (max-width: 1024px) {
-    .work__filters {
-        justify-content: center;
-    }
-    .work__container {
-      grid-template-columns: repeat(2, 330px);
-      justify-content: center;
-      row-gap: 1.875rem;
-    }
+.portfolio__tag::after {
+  content: ' \00b7';
+  margin-left: 0.5rem;
+  color: var(--text-muted);
+}
+
+.portfolio__tag:last-child::after {
+  content: '';
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr;
   }
-  
-  @media screen and (max-width: 768px) {
-    .work__container {
-      grid-template-columns: 310px;
-    }
-
-    .work__filters {
-        row-gap: .25rem;
-    }
-  }
-
-  @media screen and (max-width: 350px) {
-    .work__container {
-      grid-template-columns: 1fr;
-    }
-  }
+}

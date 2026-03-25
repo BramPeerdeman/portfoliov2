@@ -1,67 +1,40 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import "./about.css";
-import AboutMe from "../../assets/portfolio.png";
-import AboutBox from "./AboutBox";
+import React from 'react';
+import './about.css';
 
 const About = () => {
   return (
-    <section className="about container section" id="about">
-      <h2 className="section__title">About Me</h2>
+    <section className="about section" id="about">
+      <div className="container">
+        <span className="section__subtitle">Get to know me</span>
+        <h2 className="section__title">About Me</h2>
 
-      <div className="about__container grid">
-        <img src={AboutMe} alt="" className="about__img" />
+        <div className="about__content">
+          <p className="about__text">
+            I am a Software Engineering student at HBO-ICT with a deep passion for new technology,
+            backend architecture, and automation. I build secure, high-performance applications from
+            the server down to the UI.
+          </p>
+          <p className="about__text">
+            Based in Delft, The Netherlands, I enjoy tackling complex technical challenges
+            and continuously expanding my skill set in the ever-evolving world of software development.
+          </p>
+        </div>
 
-        <div className="about__data grid">
-          <div className="about__info">
-            <p className="about__description">
-              My name is Bram Peerdeman. I am 19 years old and live in Delft,
-              The Netherlands. I study HBO-ICT Software Engineering and have a passion
-              for new technology.
-            </p>
-            <a href="https://www.linkedin.com/in/bram-peerdeman-8a52a122b/" target='_blank' rel="noreferrer" className="btn">
-              Linkedin
-            </a>
+        <div className="about__stats">
+          <div className="about__stat-card">
+            <span className="about__stat-number">8+</span>
+            <span className="about__stat-label">Projects Completed</span>
           </div>
-
-          <div className="about__skills grid">
-            <div className="skills__data">
-              <div className="skills__titles">
-                <h3 className="skills__name">Typescript</h3>
-                <span className="skills__number">65%</span>
-              </div>
-
-              <div className="skills__bar">
-                <span className="skills__percentage development"></span>
-              </div>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__titles">
-                <h3 className="skills__name">Node.JS</h3>
-                <span className="skills__number">70%</span>
-              </div>
-
-              <div className="skills__bar">
-                <span className="skills__percentage design"></span>
-              </div>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__titles">
-                <h3 className="skills__name">Linux</h3>
-                <span className="skills__number">50%</span>
-              </div>
-
-              <div className="skills__bar">
-                <span className="skills__percentage linux"></span>
-              </div>
-            </div>
+          <div className="about__stat-card">
+            <span className="about__stat-number">2+</span>
+            <span className="about__stat-label">Years Experience</span>
+          </div>
+          <div className="about__stat-card">
+            <span className="about__stat-number">&infin;</span>
+            <span className="about__stat-label">Continuous Learner</span>
           </div>
         </div>
       </div>
-
-    <AboutBox />
     </section>
   );
 };
