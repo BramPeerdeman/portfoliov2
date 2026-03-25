@@ -1,80 +1,57 @@
-import React, { useState } from "react";
-import "./sidebar.css";
-import Logo from "../../assets/logo.svg";
+import React, { useState } from 'react';
+import './sidebar.css';
+
+const navLinks = [
+  { href: '#home', label: 'Home', icon: 'icon-home' },
+  { href: '#about', label: 'About', icon: 'icon-user-following' },
+  { href: '#skills', label: 'Skills', icon: 'icon-wrench' },
+  { href: '#resume', label: 'Experience', icon: 'icon-graduation' },
+  { href: '#portfolio', label: 'Projects', icon: 'icon-layers' },
+  { href: '#contact', label: 'Contact', icon: 'icon-bubble' },
+];
 
 const Sidebar = () => {
   const [toggle, showMenu] = useState(false);
 
   return (
     <>
-      <aside className={toggle ? "aside show-menu" : "aside"}>
-        <a href="#home" className="nav_logo">
-          <img src={Logo} alt="" />
-        </a>
+      <aside className={toggle ? 'aside show-menu' : 'aside'} role="navigation" aria-label="Main navigation">
+        <div className="nav_logo-wrapper">
+          <a href="#home" className="nav_logo" aria-label="Home">
+            BP
+          </a>
+        </div>
         <nav className="nav">
-          <div className="nav_menu">
-            <ul className="nav_list">
-              <li className="nav_item">
-                <a href="#home" className="nav_link">
-                  <i className="icon-home"></i>
+          <ul className="nav_list">
+            {navLinks.map((link) => (
+              <li className="nav_item" key={link.href}>
+                <a
+                  href={link.href}
+                  className="nav_link"
+                  aria-label={link.label}
+                  onClick={() => showMenu(false)}
+                >
+                  <i className={link.icon} aria-hidden="true"></i>
                 </a>
               </li>
-
-              <li className="nav_item">
-                <a href="#about" className="nav_link">
-                  <i className="icon-user-following"></i>
-                </a>
-              </li>
-
-              <li className="nav_item">
-                <a href="#services" className="nav_link">
-                  <i className="icon-briefcase"></i>
-                </a>
-              </li>
-
-              <li className="nav_item">
-                <a href="#resume" className="nav_link">
-                  <i className="icon-graduation"></i>
-                </a>
-              </li>
-
-              <li className="nav_item">
-                <a href="#portfolio" className="nav_link">
-                  <i className="icon-layers"></i>
-                </a>
-              </li>
-
-              {/* <li className="nav_item">
-                <a href="#testi" className="nav_link">
-                  <i className="icon-trophy"></i>
-                </a>
-              </li> */}
-
-              {/* <li className="nav_item">
-                <a href="#blog" className="nav_link">
-                  <i className="icon-note"></i>
-                </a>
-              </li> */}
-
-              <li className="nav_item">
-                <a href="#contact" className="nav_link">
-                  <i className="icon-bubble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </nav>
-
         <div className="nav_footer">
-          <span className="copyright">&copy; 2023 - 2024.</span>
+          <span className="copyright">&copy; {new Date().getFullYear()}</span>
         </div>
       </aside>
 
-      <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={() => showMenu(!toggle)}>
-        <i className="icon-menu"></i>
-      </div>
+      <button
+        className={toggle ? 'nav__toggle nav__toggle-open' : 'nav__toggle'}
+        onClick={() => showMenu(!toggle)}
+        aria-label={toggle ? 'Close navigation' : 'Open navigation'}
+        aria-expanded={toggle}
+      >
+        <i className={toggle ? 'icon-close' : 'icon-menu'} aria-hidden="true"></i>
+      </button>
     </>
-  )
-}
+  );
+};
 
 export default Sidebar;

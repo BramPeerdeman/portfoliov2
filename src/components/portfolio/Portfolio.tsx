@@ -1,0 +1,69 @@
+import React from 'react';
+import './portfolio.css';
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  techStack: string[];
+  codeUrl: string;
+  demoUrl?: string;
+}
+
+const projects: Project[] = [
+  {
+    id: 1,
+    title: 'Sightground - Website Scanner',
+    description: 'A comprehensive website scanning tool for analyzing security vulnerabilities and performance metrics.',
+    techStack: ['TypeScript', 'Node.js', 'React', 'Docker'],
+    codeUrl: '#',
+    demoUrl: '#',
+  },
+  {
+    id: 2,
+    title: 'TypeScript Support Package',
+    description: 'An open-source TypeScript utility package providing type-safe helpers and common patterns.',
+    techStack: ['TypeScript', 'Node.js', 'npm'],
+    codeUrl: '#',
+  },
+];
+
+const Portfolio = () => {
+  return (
+    <section className="portfolio section" id="portfolio">
+      <div className="container">
+        <span className="section__subtitle">What I have built</span>
+        <h2 className="section__title">Recent Works</h2>
+
+        <div className="portfolio__grid">
+          {projects.map((project) => (
+            <article className="portfolio__card" key={project.id}>
+              <div className="portfolio__card-header">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="portfolio__folder-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div className="portfolio__card-links">
+                  <a href={project.codeUrl} className="portfolio__icon-link" aria-label={`View code for ${project.title}`}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </a>
+                  {project.demoUrl && (
+                    <a href={project.demoUrl} className="portfolio__icon-link" aria-label={`Live demo for ${project.title}`}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+              <h3 className="portfolio__card-title">{project.title}</h3>
+              <p className="portfolio__card-desc">{project.description}</p>
+              <div className="portfolio__card-tags">
+                {project.techStack.map((tech) => (
+                  <span className="portfolio__tag" key={tech}>{tech}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;
