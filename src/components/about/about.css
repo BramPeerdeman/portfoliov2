@@ -52,3 +52,39 @@
     max-width: 300px;
   }
 }
+
+/* --- NEW LAYOUT STYLES --- */
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.about__img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+.about__btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Desktop layout (Side by Side) */
+@media screen and (min-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+  }
+  
+  .about__img {
+    margin: 0;
+  }
+}

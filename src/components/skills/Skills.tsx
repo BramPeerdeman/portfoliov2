@@ -13,14 +13,14 @@ const skillGroups: SkillGroup[] = [
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
     ),
-    skills: ['Java', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'C#'],
+    skills: ['Java (Spring Boot)', 'Node.js & Express', 'Python (Pandas / Data)', 'PostgreSQL', 'Docker'],
   },
   {
     title: 'Web',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
     ),
-    skills: ['HTML', 'SCSS', 'React.js', 'Vite'],
+    skills: ['React.js & Hooks', 'TypeScript', 'SCSS / Responsive UI', 'Vite & Build Tools', 'State Management', 'API Integration'],
   },
   {
     title: 'Infrastructure',

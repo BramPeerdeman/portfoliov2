@@ -14,7 +14,7 @@ const timelineData: TimelineEntry[] = [
     type: 'work',
     title: 'DevOps Engineer',
     organization: 'SocyList',
-    period: '2024 - Present',
+    period: '2024 - 2025',
     description: 'Managing infrastructure, CI/CD pipelines, and automation for scalable deployment workflows.',
   },
   {
@@ -22,7 +22,7 @@ const timelineData: TimelineEntry[] = [
     title: 'Intern Software Developer',
     organization: 'SocyList',
     period: '2023 - 2024',
-    description: 'Developed full-stack features and contributed to backend architecture and API design.',
+    description: 'Developed an automated website scanning service using TypeScript and Playwright.',
   },
   {
     type: 'education',

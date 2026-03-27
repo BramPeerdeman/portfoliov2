@@ -11,20 +11,27 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
+{
     id: 1,
     title: 'Sightground - Website Scanner',
-    description: 'A comprehensive website scanning tool for analyzing security vulnerabilities and performance metrics.',
-    techStack: ['TypeScript', 'Node.js', 'React', 'Docker'],
-    codeUrl: '#',
-    demoUrl: '#',
+    description: 'An automated website scanning service built during my SocyList internship to analyze security vulnerabilities and performance metrics.',
+    techStack: ['TypeScript', 'Node.js', 'Playwright', 'Docker'],
+    codeUrl: 'Helaas niet online beschikbaar vanwege bedrijfsgevoeligheid',
   },
   {
     id: 2,
-    title: 'TypeScript Support Package',
-    description: 'An open-source TypeScript utility package providing type-safe helpers and common patterns.',
-    techStack: ['TypeScript', 'Node.js', 'npm'],
-    codeUrl: '#',
+    title: 'Gereedschapsmanager',
+    description: 'A robust backend inventory management system built to handle equipment tracking, user operations, and data persistence.',
+    techStack: ['Java', 'Spring Boot', 'REST API', 'Backend'],
+    codeUrl: 'https://https://github.com/BramPeerdeman/gereedschapmanager-api', 
+  },
+  {
+    id: 3,
+    title: 'Developer Portfolio v2',
+    description: 'A fully responsive, modern single-page application built to showcase my backend and frontend development journey.',
+    techStack: ['React.js', 'TypeScript', 'Responsive UI', 'CSS'],
+    codeUrl: 'https://github.com/BramPeerdeman/portfoliov2', 
+    demoUrl: 'https://brampeerdeman.com', 
   },
 ];
 
@@ -41,7 +48,20 @@ const Portfolio = () => {
               <div className="portfolio__card-header">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="portfolio__folder-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
                 <div className="portfolio__card-links">
-                  <a href={project.codeUrl} className="portfolio__icon-link" aria-label={`View code for ${project.title}`}>
+<a 
+                    href={project.codeUrl.startsWith('http') ? project.codeUrl : '#'} 
+                    target={project.codeUrl.startsWith('http') ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="portfolio__icon-link" 
+                    aria-label={`View code for ${project.title}`}
+                    onClick={(e) => {
+                      // If it's not a real link, stop navigation and show the alert
+                      if (!project.codeUrl.startsWith('http')) {
+                        e.preventDefault();
+                        alert(project.codeUrl);
+                      }
+                    }}
+                  >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                   </a>
                   {project.demoUrl && (
