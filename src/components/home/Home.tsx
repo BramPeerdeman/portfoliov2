@@ -11,7 +11,9 @@ const Home = () => {
             Bram Peerdeman<span className="hero__dot">.</span>
           </h1>
           <p className="hero__subtitle">
-            A Full-Stack Developer &amp; DevOps Engineer.
+            A Full-Stack Developer &amp; DevOps Engineer. <br/>         <span className="footer-terminal-hint" title="Try pressing `">
+          press ` to explore
+        </span>
           </p>
           <div className="hero__actions">
             <a href="#portfolio" className="btn btn--primary">
