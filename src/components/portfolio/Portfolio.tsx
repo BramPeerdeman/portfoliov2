@@ -25,8 +25,15 @@ const projects: Project[] = [
     techStack: ['Java', 'Spring Boot', 'REST API', 'Backend'],
     codeUrl: 'https://https://github.com/BramPeerdeman/gereedschapmanager-api', 
   },
-  {
+    {
     id: 3,
+title: 'Crypto Platform',
+    description: 'A full-stack cryptocurrency platform featuring a React frontend, a Java backend API integrated with Redis, and a Go-based market data ingestion service, all containerized with Docker.',
+    techStack: ['Java', 'Go', 'React', 'TypeScript', 'Redis', 'Docker'],
+    codeUrl: 'https://github.com/BramPeerdeman/crypto-platform',
+  },
+  {
+    id: 4,
     title: 'Developer Portfolio v2',
     description: 'A fully responsive, modern single-page application built to showcase my backend and frontend development journey.',
     techStack: ['React.js', 'TypeScript', 'Responsive UI', 'CSS'],
