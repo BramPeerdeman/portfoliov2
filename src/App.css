@@ -1,9 +1,27 @@
+/* ── Bestaande stijl (ongewijzigd) ── */
 .main {
   margin-left: 80px;
+  position: relative;
+  z-index: 5;
 }
 
 @media screen and (max-width: 1024px) {
   .main {
     margin-left: 0;
   }
+}
+
+/* ── Fade-overlay voor de overgang intro → portfolio ── */
+.fade-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0a0f1a;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 200;
+  transition: opacity 1s ease;
+}
+
+.fade-overlay.active {
+  opacity: 1;
 }

@@ -1,0 +1,148 @@
+/* ── SW-specifieke tokens (conflicteert niet met index.css) ── */
+:root {
+  --sw-yellow: #ffe81f;
+  --sw-yellow-dim: rgba(255, 232, 31, 0.10);
+  --sw-blue: #4bcffa;
+  --sw-font-crawl: 'News Gothic MT', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ── Wrapper ── */
+.sw-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sw-font-crawl);
+}
+
+/* ── Fase 1: prelude-tekst ── */
+.sw-prelude {
+  position: absolute;
+  color: var(--sw-blue);
+  font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 0 2rem;
+  line-height: 1.7;
+  z-index: 20;
+  animation: preludeFade 4.2s ease forwards;
+}
+
+@keyframes preludeFade {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  72%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ── Fase 2: Logo ── */
+.sw-logo {
+  position: absolute;
+  z-index: 20;
+  font-family: var(--sw-font-crawl);
+  font-size: clamp(2.8rem, 10vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--sw-yellow);
+  text-align: center;
+  padding: 0 1rem;
+  animation: logoZoom 2.4s ease forwards;
+  /* Subtiele glow zonder performance-impact */
+  text-shadow: 0 0 60px rgba(255, 232, 31, 0.4);
+}
+
+@keyframes logoZoom {
+  0%   { opacity: 1; transform: scale(1.7); }
+  20%  { opacity: 1; transform: scale(1); }
+  78%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.07); }
+}
+
+/* ── Fase 3: 3D crawl ── */
+.sw-crawl-container {
+  position: absolute;
+  inset: 0;
+  perspective: 380px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.sw-crawl {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  width: min(90%, 680px);
+  transform: translateX(-50%) rotateX(22deg);
+  transform-origin: 50% 100%;
+  animation: crawlScroll 48s linear forwards;
+}
+
+@keyframes crawlScroll {
+  from { transform: translateX(-50%) rotateX(22deg) translateY(0); }
+  to   { transform: translateX(-50%) rotateX(22deg) translateY(-390%); }
+}
+
+.sw-crawl-episode {
+  color: var(--sw-yellow);
+  font-size: clamp(0.8rem, 2vw, 1.05rem);
+  text-align: center;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.sw-crawl-title {
+  color: var(--sw-yellow);
+  font-size: clamp(1.3rem, 4.5vw, 2.8rem);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem;
+}
+
+.sw-crawl p {
+  color: var(--sw-yellow);
+  font-size: clamp(0.95rem, 2.8vw, 1.45rem);
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1.4rem;
+}
+
+/* ── Vignette (vervaagt boven en onder) ── */
+.sw-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, #0a0f1a 10%, transparent 32%),
+    linear-gradient(to top,    #0a0f1a 5%, transparent 22%);
+  pointer-events: none;
+  z-index: 25;
+}
+
+/* ── Skip-knop ── */
+.sw-skip {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  background: transparent;
+  border: 1px solid rgba(255, 232, 31, 0.45);
+  color: var(--sw-yellow);
+  padding: 0.5rem 1.3rem;
+  font-family: var(--sw-font-crawl);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.sw-skip:hover {
+  background: var(--sw-yellow-dim);
+  border-color: var(--sw-yellow);
+}
